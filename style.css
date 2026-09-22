@@ -1,0 +1,24 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "rubrik"
+        "form"
+        "bild";
+    background-color: rgb(136, 95, 33);
+}
+
+.rubrik{
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.bild {
+    display: flex;
+    
+    width: 30%;
+    height: 30%;
+}

@@ -8,24 +8,29 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Svampletarna</h1>
-    </header>
-    <main>
+    <div class="wrapper">
+        <header>
+            <h1>Svampletarna</h1>
+        </header>
+    </div>    
+<main>
+    <div class="bild">
         <img src="svampar.jpg" alt="bild på svampar">
-        <form action="#" method="post">
-            <p>
-                <label for="namn">Användarnamn:</label>
-                <input type="text" id="namn" name="namn">
-            </p>
-            <p>
-                <label for="password">Lösenord:</label>
-                <input type="password" id="password" name="password">
-            </p>
-            <p>
-                <input type="submit" value="skicka">
-            </p>
-        </form>
-    </main>
+    </div>
+
+    <form action="#" method="get">
+        <p>
+            <label for="namn">Användarnamn:</label>
+            <input type="text" id="namn" name="namn">
+        </p>
+        <p>
+            <label for="password">Lösenord:</label>
+            <input type="password" id="password" name="password">
+        </p>
+        <p>
+            <input type="submit" value="skicka">
+        </p>
+    </form>
+</main>
 </body>
 </html>
