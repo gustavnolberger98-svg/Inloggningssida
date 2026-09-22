@@ -1,24 +1,33 @@
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "rubrik"
-        "form"
-        "bild";
-    background-color: rgb(136, 95, 33);
+    background-color: rgb(204, 160, 94);
 }
 
-.rubrik{
+header {
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "form"
+        "bild";
+}
+
 form {
+    grid-area: form;
     text-align: center;
 }
 
 .bild {
-    display: flex;
-    
+    grid-area: bild;
     width: 30%;
-    height: 30%;
+    margin: 20px auto;
+}
+
+.bild img{
+    width: 100%;
+    height: auto;
 }
