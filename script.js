@@ -4,9 +4,11 @@ const correctpassword = "qwe123";
 
 const message = document.getElementById("message");
 
-const button = document.getElementById("button");
+const button = document.getElementById("logout");
 
-button.addEventListener("click", e=>{login()
+const vidare = document.getElementById("vidare")
+
+vidare.addEventListener("click", e=>{login()
 })
 
 function login() {
@@ -15,10 +17,9 @@ const username = document.getElementById("username").value;
 const password = document.getElementById("password").value;
 
 if(username === correctname && password === correctpassword){
-    console.log(message)
+    document.getElementById("logout")
 }
 else{
     message.textContent = "Fel Namn eller lösenord";
-    console.log()
 }
 }
