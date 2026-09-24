@@ -25,7 +25,9 @@ if(username === correctname && password === correctpassword){
     e.preventDefault();
 }
 else{
+    message.style.display = "block";
     message.textContent = "Fel Namn eller lösenord";
+    e.preventDefault();
 }
 }
 
