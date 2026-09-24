@@ -28,3 +28,10 @@ else{
     message.textContent = "Fel Namn eller lösenord";
 }
 }
+
+button.addEventListener("click", logout);
+
+function logout() {
+        form.style.display = "block";
+        button.style.display = "none";
+}

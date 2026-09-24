@@ -13,7 +13,18 @@ main {
     grid-template-columns: 1fr;
     grid-template-areas:
         "form"
-        "bild";
+        "bild"
+        "button";
+}
+
+.container {
+    grid-area: form;
+    display: grid;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px;
+    width: 30%;
+    margin: 0 auto;
 }
 
 form {
@@ -21,13 +32,10 @@ form {
     text-align: center;
 }
 
-.container {
-    display: grid;
-    border-radius: 10px;
-    border: 3px solid black;
-    padding: 20px;
-    width: 30%;
-    margin: 0 auto;
+
+button {
+    grid-area: button;
+    justify-self: center;
 }
 
 .bild {
