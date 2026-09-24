@@ -33,13 +33,13 @@ if(username === correctname && password === correctpassword){
     form.style.display = "none";
     button.style.display = "block";
     welcome.style.display = "block";
-    welcome.textContent = "Välkommen " + correctname;
+    welcome.textContent = "Välkommen " + correctname + " du är nu inloggad";
     e.preventDefault();
     localStorage.setItem("inloggad", "true");
 }
 else{
     message.style.display = "block";
-    message.textContent = "Fel Namn eller lösenord";
+    message.textContent = "Felaktiga inloggningsuppgifter";
     e.preventDefault();
 }
 }
