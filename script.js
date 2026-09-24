@@ -11,6 +11,8 @@ const vidare = document.getElementById("vidare");
 
 const form = document.getElementById("formen");
 
+const welcome = document.getElementById("welcome");
+
 vidare.addEventListener("click", e=>{login(e)
 })
 
@@ -22,10 +24,10 @@ const password = document.getElementById("password").value;
 if(username === correctname && password === correctpassword){
     form.style.display = "none";
     button.style.display = "block";
+    welcome.style.display = "block"
+    welcome.textContent = "Välkommen " + correctname;
     e.preventDefault();
-    localStorage.getItem("correctname");
-    localStorage.getItem("correctpassword");
-    localStorage.setItem("correctname");
+    localStorage.setItem("correctname", correctname);
     localStorage.setItem("correctpassword", correctpassword);
 }
 else{
@@ -42,4 +44,3 @@ function logout() {
         button.style.display = "none";
         localStorage.clear();
     }
-    
