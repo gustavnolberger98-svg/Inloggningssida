@@ -23,6 +23,10 @@ if(username === correctname && password === correctpassword){
     form.style.display = "none";
     button.style.display = "block";
     e.preventDefault();
+    localStorage.getItem("correctname");
+    localStorage.getItem("correctpassword");
+    localStorage.setItem("correctname");
+    localStorage.setItem("correctpassword", correctpassword);
 }
 else{
     message.style.display = "block";
@@ -36,4 +40,6 @@ button.addEventListener("click", logout);
 function logout() {
         form.style.display = "block";
         button.style.display = "none";
-}
+        localStorage.clear();
+    }
+    
