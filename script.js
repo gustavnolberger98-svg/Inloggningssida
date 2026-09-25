@@ -13,7 +13,7 @@ const form = document.getElementById("formen");
 
 const welcome = document.getElementById("welcome");
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".container");//Hade inget id på container så använde mig av query istället.
 container.appendChild(welcome);
 container.appendChild(button); //Lägger in knapparna in diven container istället för ändra i html.
 
