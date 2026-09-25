@@ -17,7 +17,7 @@ const container = document.querySelector(".container");
 container.appendChild(welcome);
 container.appendChild(button); //Lägger in knapparna in diven container istället för ändra i html.
 
-const inloggad = localStorage.getItem("inloggad"); //Läser tillbaka värdet från funktionen.
+const inloggad = localStorage.getItem("inloggad"); // Hämtar värdet från localStorage.
 
 if(inloggad === "true"){ 
     form.style.display = "none";
@@ -25,28 +25,29 @@ if(inloggad === "true"){
     welcome.style.display = "block";
     welcome.textContent = "Välkommen " + correctname + " du är nu inloggad";
 } //Testar först om användaren är inloggad på sidan med "true".
+//Om användaren är inloggad så försvinner form och visar welcome och button från HTML.
 
 vidare.addEventListener("click", e=>{login(e)
-}) //Vid klick av knapp så körs funktionen
+}) //Ett event som gör att vid klick av knapp så körs funktionen.
 
-function login(e) { //e är knappen ovanför
+function login(e) { //e är eventet alltså Click ovanför.
 const username = document.getElementById("username").value;
 
 const password = document.getElementById("password").value; //Värdet av vad användaren skriver in.
 
-if(username === correctname && password === correctpassword){
+if(username === correctname && password === correctpassword){ //Om namn och lösenord är rätt
     form.style.display = "none";
     button.style.display = "block";
     welcome.style.display = "block";
     welcome.textContent = "Välkommen " + correctname + " du är nu inloggad";
-    e.preventDefault();
-    localStorage.setItem("inloggad", "true"); //
+    e.preventDefault(); //förhindrar att sidan laddas om.
+    localStorage.setItem("inloggad", "true"); //Kommer ihåg användaren i webben/lokala sidan.
 } //Om rätt så körs funktioner som tar bort login menyn, en välkomms text och även sparar användaren med true funktionen.
 else{
     message.style.display = "block";
     message.textContent = "Felaktiga inloggningsuppgifter";
     e.preventDefault(); //Gör så inte texten bara dyker upp i 0,5 sekunder.
-    //Alltså förhindrar att den går tillbaka till standard/startsidan.
+    //Alltså förhindrar att sidan laddas om.
 }
 }
 
