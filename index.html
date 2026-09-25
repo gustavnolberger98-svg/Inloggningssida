@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Svampletarna</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Svampletarna</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Svampletarna</h1>
+        </header>
     <main>
-        <img src="svampar.jpg" alt="bild på svampar">
-        <form action="#" method="post">
+        <form id="formen" method="get">
             <p>
-                <label for="namn">Användarnamn:</label>
-                <input type="text" id="namn" name="namn">
+                <label for="username">Namn:</label>
+                <input type="text" id="username" placeholder="Namn" name="namn" required>
             </p>
-            <p>
+             <p>
                 <label for="password">Lösenord:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" placeholder="Lösenord" name="password" required>
             </p>
             <p>
-                <input type="submit" value="skicka">
+                <input id="vidare" type="submit" value="Logga in">
             </p>
+            <p class="message" id="message"></p>
         </form>
+    </div>
+
+    <div class="bild">
+        <img src="svampar.jpg" alt="bild på svampar">
+    </div>
+    
+        <button id="logout">Logga ut</button>
+    
+        <p class="welcome" id="welcome"></p>
     </main>
 </body>
 </html>
