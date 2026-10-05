@@ -14,11 +14,12 @@ main {
     grid-template-areas:
         "form"
         "bild"
-        "button";
+        "button"
+        "welcome";
 }
 
 .container {
-    grid-area: form;
+    grid-area: "form";
     display: grid;
     border-radius: 10px;
     border: 3px solid black;
@@ -28,17 +29,17 @@ main {
 }
 
 form {
-    grid-area: form;
+    grid-area: "form";
     text-align: center;
 }
 
 button {
-    grid-area: button;
+    grid-area: "button";
     justify-self: center;
 }
 
 .bild {
-    grid-area: bild;
+    grid-area: "bild";
     width: 30%;
     margin: 20px auto;
 }
@@ -46,4 +47,9 @@ button {
 .bild img{
     width: 100%;
     height: auto;
+}
+
+#welcome {
+    grid-area: "welcome";
+    text-align: center;
 }

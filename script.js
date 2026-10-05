@@ -1,22 +1,12 @@
 const correctname = "Kalle";
-
 const correctpassword = "qwe123";
-
 const message = document.getElementById("message");
-
 const button = document.getElementById("logout");
 button.style.display = "none" //Döljer knappen för tillfället.
-
 const vidare = document.getElementById("vidare");
-
 const form = document.getElementById("formen");
-
 const welcome = document.getElementById("welcome");
-
 const container = document.querySelector(".container");//Hade inget id på container så använde mig av query istället.
-container.appendChild(welcome);
-container.appendChild(button); //Lägger in knapparna in diven container istället för ändra i html.
-
 const inloggad = localStorage.getItem("inloggad"); // Hämtar värdet från localStorage.
 
 if(inloggad === "true"){ 
